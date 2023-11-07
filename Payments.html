@@ -1,0 +1,89 @@
+<! 
+Citation for the following code:
+Date 11-2-2023
+Adapted from:
+Source URL:
+https://canvas.oregonstate.edu/courses/1933532/files/99942416?wrap=1
+!>
+
+<html>
+<head>
+<title>Payments</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Payments</h1>
+
+[ <a href="index.html">Books</a> | <a href="Customers.html">Customers</a> | <a href="Orders.html">Orders</a> | <a href="OrderDetails.html">OrderDetails</a> | <a href="Payments.html">Payments</a> ]
+<div id="browse" style="display: block">
+<p><strong>Browse Payments</strong></p>
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#">New</a></th>
+    <th></th>
+    <th>ID</th>
+    <th>date</th>
+    <th>credit_card</th>
+    <th>exp_date</th>
+    <th>customer_id</th>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>1</td>
+    <td >4/8/2008</td>
+    <td>1234567890122345</td>
+    <td>9/2029</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>2</td>
+    <td>4/9/2008</td>
+    <td>4284652697294202</td>
+    <td >9/2029</td>
+    <td>3</td>
+  
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>3</td>
+    <td>4/10/2008 </td>
+    <td>5241331426663057</td>
+    <td>8/2027</td>
+    <td>5</td>
+
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>4</td>
+    <td>4/11/2008</td>
+    <td>4556204748319454</td>
+    <td>11/2023</td>
+    <td>5</td>
+
+  </tr>
+
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addPayments">
+        <legend><strong>Add Payments</strong></legend>
+          <fieldset class="fields">
+            <label> date </label> <input type="date" name="date">
+            <label> credit_card </label> <input type="text" name="credit_card">
+            <label> exp_date </label> <input type="text" name="exp_date">
+            <label> customer_id </label> <input type="text" name="customer_id">
+           
+          </fieldset>
+          <input class="btn" type="submit" id="addPayments" value="Add Payments">
+          <input class="btn" type="button" value="cancel">
+	</form> <!--add new Payments-->
+
+</body>
+</html>

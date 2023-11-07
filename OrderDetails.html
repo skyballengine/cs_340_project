@@ -1,0 +1,109 @@
+<! 
+Citation for the following code:
+Date 11-2-2023
+Adapted from:
+Source URL:
+https://canvas.oregonstate.edu/courses/1933532/files/99942416?wrap=1
+!>
+
+<html>
+<head>
+<title>OrderDetails</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>OrderDetails</h1>
+
+[ <a href="index.html">Books</a> | <a href="Customers.html">Customers</a> | <a href="Orders.html">Orders</a> | <a href="OrderDetails.html">OrderDetails</a> | <a href="Payments.html">Payments</a> ]
+<div id="browse" style="display: block">
+<p><strong>Browse OrderDetails</strong></p>
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#">New</a></th>
+    <th></th>
+    <th>ID</th>
+    <th>book_id</th>
+    <th>order_id</th>
+    <th>book_quantity</th>
+    <th>unit_price</th>
+    <th>line_total</th>
+    <th>status</th>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>1</td>
+    <td >1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>18.99</td>
+    <td>18.99</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>2</td>
+    <td>4</td>
+    <td>2</td>
+    <td >2</td>
+    <td>23.99</td>
+    <td>47.98</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>3</td>
+    <td>2 </td>
+    <td>3</td>
+    <td>1</td>
+    <td>24.99</td>
+    <td>24.99</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>4</td>
+    <td>1</td>
+    <td>3</td>
+    <td>1</td>
+    <td>18.99</td>
+    <td>18.99</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>5</td>
+    <td>3 </td>
+    <td>3</td>
+    <td>1</td>
+    <td>14.99</td>
+    <td>14.99</td>
+    <td>1</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addOrderdetails">
+        <legend><strong>Add Orderdetails</strong></legend>
+          <fieldset class="fields">
+            <label> book_id </label> <input type="text" name="book_id">
+            <label> order_id </label> <input type="text" name="order_id">
+            <label> book_quantity </label> <input type="text" name="book_quantity">
+            <label> unit_price </label> <input type="text" name="unit_price">
+            <label> line_price </label> <input type="text" name="line_price">
+            <label> shipped </label> <input type="number" name="shipped">
+          </fieldset>
+          <input class="btn" type="submit" id="addOrderdetails" value="Add Orderdetails">
+          <input class="btn" type="button" value="cancel">
+	</form> <!--add new Orderdetails-->
+</div><!-- insert -->
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<! 
+Citation for the following code:
+Date 11-2-2023
+Adapted from:
+Source URL:
+https://canvas.oregonstate.edu/courses/1933532/files/99942416?wrap=1
+!>
+
+<html>
+<head>
+<title>Books</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Books</h1>
+
+[ <a href="index.html">Books</a> | <a href="Customers.html">Customers</a> | <a href="Orders.html">Orders</a> | <a href="OrderDetails.html">OrderDetails</a> | <a href="Payments.html">Payments</a> ]
+<div id="browse" style="display: block">
+<p><strong>Browse Books</strong></p>
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#">New</a></th>
+    <th></th>
+    <th>ID</th>
+    <th>Author</th>
+    <th>Title</th>
+    <th>Genre</th>
+    <th>price</th>
+    <th>num_in_stock</th>
+
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >1</td>
+    <td >Michael J. Sullivan</td>
+    <td align="right" >Theft of Swords</td>
+    <td>Fantasy</td>
+    <td>18.99</td>
+    <td> 4 </td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >2</td>
+    <td>Brandon Sanderson</td>
+    <td align="right" >The Way of Kings</td>
+    <td >Fantasy</td>
+    <td>23.99</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>3</td>
+    <td>Charlotte Brontë</td>
+    <td align="right" >Jane Eyre</td>
+    <td>Romance</td>
+    <td> 14.99</td>
+    <td> 6 </td>
+
+  </tr>
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addBook">
+        <legend><strong>Add Book</strong></legend>
+          <fieldset class="fields">
+            <label> Author </label> <input type="text" name="author">
+            <label> Title </label> <input type="text" name="title">
+            <label> Genre </label> <input type="text" name="genre">
+            <label> Price </label> <input type="number" name="price">
+            <label> num_in_stock </label> <input type="number" name="num_in_stock">
+          </fieldset>
+          <input class="btn" type="submit" id="addBook" value="Add book">
+          <input class="btn" type="button" value="cancel">
+	</form> <!--add new book-->
+</div><!-- insert -->
+
+<p>&nbsp;</p>
+<div id="update" style="display: block">
+  <form id="updateBook">
+      <legend><strong>Update Book</strong></legend>
+        <fieldset class="fields">
+          <label> Author </label> <input type="text" name="author">
+          <label> Title </label> <input type="text" name="title">
+          <label> Genre </label> <input type="text" name="genre">
+          <label> Price </label> <input type="number" name="price">
+          <label> num_in_stock </label> <input type="number" name="num_in_stock">
+        </fieldset>
+    <input class="btn" type="submit" id="UpdateSaveBook" value="Save Update Book">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div><!-- update -->
+<p>&nbsp;</p>
+<div id="delete" style="display: block">
+  <form id="deleteBook">
+      <legend><strong>Delete Book</strong></legend>
+          <fieldset class="fields">
+          <p>Are you sure you wish to delete the following?</p>
+          <label>Book ID:</label> 2 |
+            <label> The Way of Kings </label> by Brandon Sanderson
+            
+    </fieldset>
+    <input class="btn" type="submit" id="deleteBook" value="Delete Book">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div><!-- delete -->
+</body>
+</html>

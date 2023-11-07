@@ -1,0 +1,93 @@
+<! 
+Citation for the following code:
+Date 11-2-2023
+Adapted from:
+Source URL:
+https://canvas.oregonstate.edu/courses/1933532/files/99942416?wrap=1
+!>
+
+<html>
+<head>
+<title>Orders</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Orders</h1>
+
+[ <a href="index.html">Books</a> | <a href="Customers.html">Customers</a> | <a href="Orders.html">Orders</a> | <a href="OrderDetails.html">OrderDetails</a> | <a href="Payments.html">Payments</a> ]
+<div id="browse" style="display: block">
+<p><strong>Browse Orders</strong></p>
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#">New</a></th>
+    <th></th>
+    <th>ID</th>
+    <th>date</th>
+    <th>customer_id</th>
+    <th>payment_id</th>
+
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>1</td>
+    <td >4/8/2008</td>
+    <td>4</td>
+    <td>1</td>
+
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>2</td>
+    <td>4/9/2008</td>
+    <td>3</td>
+    <td >2</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>3</td>
+    <td>4/10/2008</td>
+    <td>5</td>
+    <td>3</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addOrder">
+        <legend><strong>Add Order</strong></legend>
+          <fieldset class="fields">
+            <label> date </label> <input type="text" name="date">
+            <label> customer_id </label> <input type="text" name="customer_id">
+            <label> payment_id </label> <input type="text" name="payment_id">
+
+          </fieldset>
+          <input class="btn" type="submit" id="addOrder" value="Add Order">
+          <input class="btn" type="button" value="cancel">
+	</form> <!--add new Order-->
+</div><!-- insert -->
+
+<p>&nbsp;</p>
+<div id="update" style="display: block">
+  <form id="updateOrder">
+      <legend><strong>Update Order</strong></legend>
+        <fieldset class="fields">
+            <label> order_id </label> <input type="number" name="order_id"
+            value="1">
+            <label> date </label> <input type="date" name="date"
+            value="4/8/2008">
+            <label> customer </label> <input type="tex " name="customer_id"
+            value="Miguel Cabrera">
+            <label> payment_id </label> <input type="text" name="payment_id"
+            value="NULL">
+
+        </fieldset>
+    <input class="btn" type="submit" id="UpdateSaveOrder" value="Save Order Update">
+          <input class="btn" type="button" value="cancel" >
+
+
+</body>
+</html>
