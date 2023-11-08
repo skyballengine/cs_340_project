@@ -69,7 +69,7 @@ https://canvas.oregonstate.edu/courses/1933532/files/99942416?wrap=1
     <td>4</td>
     <td>1</td>
     <td>3</td>
-    <td>1</td>
+    <td>1</td
     <td>18.99</td>
     <td>18.99</td>
     <td>1</td>
@@ -89,19 +89,24 @@ https://canvas.oregonstate.edu/courses/1933532/files/99942416?wrap=1
 <p>&nbsp;</p>
 </div> <!-- browse -->
 <div id="insert" style="display: block">
-    <form id="addOrderdetails">
-        <legend><strong>Add Orderdetails</strong></legend>
+    <form id="addOrderDetails">
+        <legend><strong>Add OrderDetails</strong></legend>
           <fieldset class="fields">
             <label> book_id </label> <input type="text" name="book_id">
             <label> order_id </label> <input type="text" name="order_id">
             <label> book_quantity </label> <input type="text" name="book_quantity">
             <label> unit_price </label> <input type="text" name="unit_price">
-            <label> line_price </label> <input type="text" name="line_price">
-            <label> shipped </label> <input type="number" name="shipped">
+            <label> line_total </label> <input type="text" name="line_total">
+            <label for="status">Choose status</label>
+              <select name="status" id="addOrderDetails">
+                  <option value="1">Paid</option>
+                  <option value="0">Unpaid</option>
+              </select>
+            <!-- <label> status </label> <input type="number" name="status"> -->
           </fieldset>
-          <input class="btn" type="submit" id="addOrderdetails" value="Add Orderdetails">
+          <input class="btn" type="submit" id="addOrderDetails" value="Add Order Details">
           <input class="btn" type="button" value="cancel">
-	</form> <!--add new Orderdetails-->
+	</form> <!--add new OrderDetails-->
 </div><!-- insert -->
 
 
