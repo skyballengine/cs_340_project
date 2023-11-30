@@ -1,0 +1,60 @@
+{{!-- Just some plain text --}}
+
+<h1>The server is running!</h1>
+<p>If you see this text, the server is <strong>definitely</strong> working!</p>
+
+[<a href="/">Books</a> | <a href="/Customers">Customers</a> | <a href="/Orders">Orders</a> | <a href="/OrderDetails">OrderDetails</a> | <a href="/Payments">Payments</a> ]
+
+
+{{!-- The Data from our Database --}}
+
+{{!-- Create a table --}}
+<table>
+
+    {{!-- Header section --}}
+    <thead>
+
+        {{!-- For just the first row, we print each key of the row object as a header cell so we
+        know what each column means when the page renders --}}
+        <tr>
+            {{#each data.[0]}}
+            <th>
+                {{@key}}
+            </th>
+            {{/each}}
+        </tr>
+    </thead>
+
+    {{!-- Body section --}}
+    <tbody>
+
+        {{!-- For each row, print the id, fname, lname, homeworld and age, in order --}}
+        {{#each data}}
+        <tr>
+            <td>{{this.payment_id}}</td>
+            <td>{{this.customer_id}}</td>
+            <td>{{this.date}}</td>
+            <td>{{this.credit_card}}</td>
+            <td>{{this.exp_date}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<h2>Add a Payment using an HTML form</h2>
+<p>To add a new Payment, please enter the information below and click `Submit`!</p>
+<form id="add-payment-form" method="POST" action="/add-payment-form">
+    <label for="input-customerid"> Customer ID: </label>
+    <input type="number" name="input-customerid" id="input-customerid">
+    
+    <label for="input-date">Date: </label>
+    <input type="date" name="input-date" id="input-date">
+
+    <label for="input-cc">Credit Card number: </label>
+    <input type="number" name="input-cc" id="input-cc">
+
+    <label for="input-exp">Experiation Date: </label>
+    <input type="text"  name="input-exp" id="input-exp">
+
+    <input type="submit">
+</form>

@@ -1,0 +1,59 @@
+{{!-- Just some plain text --}}
+
+<h1>SkyCatBooks</h1>
+
+[<a href="/">Books</a> | <a href="/Customers">Customers</a> | <a href="/Orders">Orders</a> | <a href="/OrderDetails">OrderDetails</a> | <a href="/Payments">Payments</a> ]
+
+
+{{!-- The Data from our Database --}}
+
+{{!-- Create a table --}}
+<table>
+
+    {{!-- Header section --}}
+    <thead>
+
+        {{!-- For just the first row, we print each key of the row object as a header cell so we
+        know what each column means when the page renders --}}
+        <tr>
+            {{#each data.[0]}}
+            <th>
+                {{@key}}
+            </th>
+            {{/each}}
+        </tr>
+    </thead>
+
+    {{!-- Body section --}}
+    <tbody>
+
+        {{!-- For each row, print the id, fname, lname, homeworld and age, in order --}}
+        {{#each data}}
+        <tr>
+            <td>{{this.order_id}}</td>
+            <td>{{this.customer_id}}</td>
+            <td>{{this.payment_id}}</td>
+            <td>{{this.date}}</td>
+            <td>{{this.total_price}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<h2>Add an Order using an HTML form</h2>
+<p>To add a new Order, please enter the information below and click `Submit`!</p>
+<form id="add-order-form" method="POST" action="/add-order-form">
+    <label for="input-customerid"> Customer ID: </label>
+    <input type="number" name="input-customerid" id="input-customerid">
+    
+    <label for="input-paymentid">Payment ID: </label>
+    <input type="number" name="input-paymentid" id="input-paymentid">
+
+    <label for="input-date">Date: </label>
+    <input type="date" name="input-date" id="input-date">
+
+    <label for="input-totaldue">Total Due: </label>
+    <input type="text" name="input-totaldue" id="input-totaldue">
+
+    <input type="submit">
+</form>

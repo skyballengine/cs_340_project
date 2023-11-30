@@ -1,0 +1,103 @@
+
+<!-- index.hbs -->
+<h1>SkyCat Books</h1>
+[<a href="/">Books</a> | <a href="/Customers">Customers</a> | <a href="/Orders">Orders</a> | <a href="/OrderDetails">OrderDetails</a> | <a href="/Payments">Payments</a> ]
+
+<p>Books:</p>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+{{!-- Create a table --}}
+<table id="book-table">>
+
+    {{!-- Header section --}}
+    <thead>
+
+        {{!-- For just the first row, we print each key of the row object as a header cell so we
+        know what each column means when the page renders --}}
+        <tr>
+            {{#each data.[0]}}
+            <th>
+                {{@key}}
+            </th>
+            {{/each}}
+            <th>delete</th>
+        </tr>
+    </thead>
+
+    {{!-- Body section --}}
+    <tbody>
+
+        {{!-- For each row, print the id, fname, lname, homeworld and age, in order --}}
+        {{#each data}}
+        <tr data-value={{this.book_id}}>>
+            <td>{{this.book_id}}</td>
+            <td>{{this.author}}</td>
+            <td>{{this.title}}</td>
+            <td>{{this.genre}}</td>
+            <td>{{this.num_in_stock}}</td>
+            <td>{{this.price}}</td>
+            <td><button onclick="deleteBook({{this.book_id}})">Delete</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<script src="./js/delete_book.js"></script>
+
+
+<!-- /views/index.hbs -->
+<h2>Add a book using an HTML form</h2>
+<p>To add a new book, please enter the information below and click `Submit`!</p>
+<form id="add-book-form" method="POST" action="/add-book-form">
+    <label for="input-author">author: </label>
+    <input type="text" name="input-author" id="input-author">
+    
+    <label for="input-title">Title: </label>
+    <input type="text" name="input-title" id="input-title">
+
+    <label for="input-genre">genre: </label>
+    <input type="text" name="input-genre" id="input-genre">
+
+    <label for="input-num_in_stock">num_in_stock: </label>
+    <input type="number" name="input-num_in_stock" id="input-num_in_stock">
+
+    <label for="input-price">price: </label>
+    <input type="number" step='0.01' name="input-price" id="input-price">
+
+    <input type="submit">
+</form>
+
+
+<!-- /views/index.hbs -->
+
+{{!-- Form to add a record to the table  --}}
+
+
+{{!-- Embed our javascript to handle the DOM manipulation and AJAX request --}}
+{{!-- <script src="./js/add_book.js"></script> --}}
+
+
+
+<h2>Updating A Book's num_in_stock</h2>
+<p>To update the stock of a specific book, select the author title combo from the drop-down menu on the left and enter the number in the field on the right</p>
+<form id="update-book-form-ajax">
+
+    <label for="input-combo">Author + Title: </label>
+    <select name="input-combo" id="mySelect">
+        <option value="test">Select a Book</option>
+        {{#each data}}
+        <option value="{{this.book_id}}">{{this.author}} {{this.title}}</option>
+        {{/each}}
+    </select>
+
+    <label for="input-num_in_stock">num_in_stock: </label>
+    <input type="number" name="input-num_in_stock" id="input-num_in_stock-update">
+
+    
+    <input type="submit">
+
+</form>
+
+<script src="./js/update_book.js"></script>
+
