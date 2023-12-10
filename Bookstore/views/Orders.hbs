@@ -57,10 +57,22 @@
 <p>To add a new order, please enter the information below and click `Submit`!</p>
 <form id="add-order-form" method="POST" action="/add-order-form">
     <label for="input-customerid"> Customer ID: </label>
-    <input type="number" name="input-customerid" id="input-customerid" required>
+    {{!-- <input type="number" name="input-customerid" id="input-customerid" required> --}}
+    <select name="input-customerid" id="mySelect">
+        <option value="test">Customer ID</option>
+        {{#each data}}
+        <option value="{{this.customer_id}}">{{this.customer_id}}</option>
+        {{/each}}
+    </select>
 
     <label for="input-paymentid">Payment ID: </label>
-    <input type="number" name="input-paymentid" id="input-paymentid" required>
+    {{!-- <input type="number" name="input-paymentid" id="input-paymentid" required> --}}
+    <select name="input-paymentid" id="mySelect">
+        <option value="test">Payment ID</option>
+        {{#each data}}
+        <option value="{{this.payment_id}}">{{this.payment_id}}</option>
+        {{/each}}
+    </select>
 
     <label for="input-date">Date: </label>
     <input type="date" name="input-date" id="input-date" required>

@@ -57,7 +57,14 @@
 <p>To add a new payment, please enter the information below and click `Submit`!</p>
 <form id="add-payment-form" method="POST" action="/add-payment-form">
     <label for="input-customerid">Customer ID: </label>
-    <input type="number" name="input-customerid" id="input-customerid" required>
+    {{!-- <input type="number" name="input-customerid" id="input-customerid" required> --}}
+    <select name="input-customerid" id="mySelect">
+        <option value="test">Customer ID</option>
+        {{#each data}}
+        <option value="{{this.customer_id}}">{{this.customer_id}}</option>
+        {{/each}}
+    </select>
+
 
     <label for="input-date">Date: </label>
     <input type="date" name="input-date" id="input-date" required pattern="\d{4}-\d{2}-\d{2}">

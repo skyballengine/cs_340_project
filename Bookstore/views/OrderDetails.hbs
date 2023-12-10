@@ -59,10 +59,22 @@
 <p>To add a new order detail, please enter the information below and click `Submit`!</p>
 <form id="add-od-form" method="POST" action="/add-od-form">
     <label for="input-bookid">Book ID: </label>
-    <input type="number" name="input-bookid" id="input-book" required>
+    {{!-- <input type="number" name="input-bookid" id="input-book" required> --}}
+    <select name="input-bookid" id="mySelect">
+        <option value="test">Book ID</option>
+        {{#each data}}
+        <option value="{{this.book_id}}">{{this.book_id}}</option>
+        {{/each}}
+    </select>
 
     <label for="input-orderid">Order ID: </label>
-    <input type="number" name="input-orderid" id="input-orderid" required>
+    {{!-- <input type="number" name="input-orderid" id="input-orderid" required> --}}
+    <select name="input-orderid" id="mySelect">
+        <option value="test">Order ID</option>
+        {{#each data}}
+        <option value="{{this.order_id}}">{{this.order_id}}</option>
+        {{/each}}
+    </select>
 
     <label for="input-bookquant">Quantity: </label>
     <input type="number" name="input-bookquant" id="input-bookquant" required>
