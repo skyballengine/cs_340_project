@@ -9,8 +9,8 @@ function deleteBook(bookID) {
     url: link,
     type: 'DELETE',
     data: JSON.stringify(data),
-    contentType: "application/json; charset=utf-8", 
-    success: function(result) {
+    contentType: "application/json; charset=utf-8",
+    success: function (result) {
       deleteRow(bookID);
     }
   });
@@ -22,7 +22,7 @@ function deleteBook(bookID) {
 //     let data = {
 //         id: bookID
 //     };
-    
+
 //     // Setup our AJAX request
 //     var xhttp = new XMLHttpRequest();
 //     xhttp.open("DELETE", "/delete-book-ajax", true);
@@ -45,15 +45,15 @@ function deleteBook(bookID) {
 // }
 
 
-function deleteRow(bookID){
+function deleteRow(bookID) {
 
-    let table = document.getElementById("book-table");
-    for (let i = 0, row; row = table.rows[i]; i++) {
-       //iterate through rows
-       //rows would be accessed using the "row" variable assigned in the for loop
-       if (table.rows[i].getAttribute("data-value") == bookID) {
-            table.deleteRow(i);
-            break;
-       }
+  let table = document.getElementById("book-table");
+  for (let i = 0, row; row = table.rows[i]; i++) {
+    //iterate through rows
+    //rows would be accessed using the "row" variable assigned in the for loop
+    if (table.rows[i].getAttribute("data-value") == bookID) {
+      table.deleteRow(i);
+      break;
     }
+  }
 }

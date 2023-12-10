@@ -1,0 +1,53 @@
+:root {
+    --color1: #e5f1f6;
+    --color2: #465902;
+    --color3: #1e2601;
+    --color4: #c1d911cc;
+    --color5: #e6f288;
+    --header-color:rgb(213, 160, 61);
+    --custom-size: 200%;
+    --custom-embellishment-name: ;
+  }
+
+body {
+/* Can alternatively define in html {} or :root {} */
+    background-color: var(--color1);
+    background-size: cover;
+    color: var(--color2);
+    font-family: "Anuphan", sans-serif; /* Define with at least one font name and its related generic family name.*/
+    margin: 1% 2%;
+    padding: 1.5%;
+    border: 10%;
+    max-width: 100%;
+}
+
+table {
+    border-spacing: 20px;
+}
+
+
+header {
+    color: var(--color4);
+    background-color: ;
+    margin: 0%;
+    padding-bottom: 30px;
+  }
+
+
+  a {
+}
+a:link {
+  color: rgb(0, 128, 96);
+  text-decoration: none;
+}
+a:hover {
+  color: aquamarine;
+  background-color: var(--color4);
+}
+a:active {
+  color: rgb(159, 27, 27);
+}
+a:visited {
+  color: purple;
+}
+

@@ -1,11 +1,24 @@
 {{!-- Just some plain text --}}
+<!DOCTYPE html>
+<html>
 
-<h1>SkyCatBooks</h1>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel='stylesheet' type='text/css' href='./css/main.css'>
 
-[<a href="/">Books</a> | <a href="/Customers">Customers</a> | <a href="/Orders">Orders</a> | <a href="/OrderDetails">OrderDetails</a> | <a href="/Payments">Payments</a> ]
+    {{!--
+    <script src='main.js'></script> --}}
+</head>
+
+<h1>SkyCat Books</h1>
+
+[<a href="/">Books</a> | <a href="/Customers">Customers</a> | <a href="/Orders">Orders</a> | <a
+    href="/OrderDetails">OrderDetails</a> | <a href="/Payments">Payments</a> ]
 
 
 {{!-- The Data from our Database --}}
+<h2>Orders</h2>
 
 {{!-- Create a table --}}
 <table>
@@ -40,20 +53,22 @@
     </tbody>
 </table>
 
-<h2>Add an Order using an HTML form</h2>
-<p>To add a new Order, please enter the information below and click `Submit`!</p>
+<h2>Add an order</h2>
+<p>To add a new order, please enter the information below and click `Submit`!</p>
 <form id="add-order-form" method="POST" action="/add-order-form">
     <label for="input-customerid"> Customer ID: </label>
-    <input type="number" name="input-customerid" id="input-customerid">
-    
+    <input type="number" name="input-customerid" id="input-customerid" required>
+
     <label for="input-paymentid">Payment ID: </label>
-    <input type="number" name="input-paymentid" id="input-paymentid">
+    <input type="number" name="input-paymentid" id="input-paymentid" required>
 
     <label for="input-date">Date: </label>
-    <input type="date" name="input-date" id="input-date">
+    <input type="date" name="input-date" id="input-date" required>
 
     <label for="input-totaldue">Total Due: </label>
-    <input type="text" name="input-totaldue" id="input-totaldue">
+    <input type="text" name="input-totaldue" id="input-totaldue" required>
 
     <input type="submit">
 </form>
+
+</html>

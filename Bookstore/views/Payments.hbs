@@ -1,12 +1,24 @@
 {{!-- Just some plain text --}}
+<!DOCTYPE html>
+<html>
 
-<h1>The server is running!</h1>
-<p>If you see this text, the server is <strong>definitely</strong> working!</p>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel='stylesheet' type='text/css' href='./css/main.css'>
 
-[<a href="/">Books</a> | <a href="/Customers">Customers</a> | <a href="/Orders">Orders</a> | <a href="/OrderDetails">OrderDetails</a> | <a href="/Payments">Payments</a> ]
+    {{!--
+    <script src='main.js'></script> --}}
+</head>
+
+<h1>SkyCat Books</h1>
+
+[<a href="/">Books</a> | <a href="/Customers">Customers</a> | <a href="/Orders">Orders</a> | <a
+    href="/OrderDetails">OrderDetails</a> | <a href="/Payments">Payments</a> ]
 
 
 {{!-- The Data from our Database --}}
+<h2>Payments</h2>
 
 {{!-- Create a table --}}
 <table>
@@ -41,20 +53,24 @@
     </tbody>
 </table>
 
-<h2>Add a Payment using an HTML form</h2>
-<p>To add a new Payment, please enter the information below and click `Submit`!</p>
+<h2>Add a payment</h2>
+<p>To add a new payment, please enter the information below and click `Submit`!</p>
 <form id="add-payment-form" method="POST" action="/add-payment-form">
-    <label for="input-customerid"> Customer ID: </label>
-    <input type="number" name="input-customerid" id="input-customerid">
-    
+    <label for="input-customerid">Customer ID: </label>
+    <input type="number" name="input-customerid" id="input-customerid" required>
+
     <label for="input-date">Date: </label>
-    <input type="date" name="input-date" id="input-date">
+    <input type="date" name="input-date" id="input-date" required pattern="\d{4}-\d{2}-\d{2}">
 
-    <label for="input-cc">Credit Card number: </label>
-    <input type="number" name="input-cc" id="input-cc">
+    <label for=" input-cc">Credit Card: </label>
+    <input type="text" name="input-cc" id="input-cc" placeholder="1111-1111-1111-1111" required
+        pattern="/[0-9]{4}+\d\s\S[0-9]{4}+\d\s\S[0-9]{4}+\d\s\S[0-9]{4}/">
 
-    <label for="input-exp">Experiation Date: </label>
-    <input type="text"  name="input-exp" id="input-exp">
+    <label for="input-exp">Expiration Date: </label>
+    <input type="text" name="input-exp" id="input-exp" placeholder="MM/YY" required
+        pattern="(?:0[1-9]|1[0-2])/[0-9]{2}">
 
     <input type="submit">
 </form>
+
+</html>
